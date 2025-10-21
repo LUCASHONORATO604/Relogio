@@ -6,7 +6,7 @@ function atualizartempo() {
 
     let agora = new Date();
 
-    let horario = agora.getHours() + ':' +agora.getMinutes() + ':' + agora.getSeconds();
+    let horario = corrigirhorario(agora.getHours()) + ':' + corrigirhorario(agora.getMinutes()) + ':' + corrigirhorario(agora.getSeconds());
 
     display.textContent = horario;
 
@@ -15,6 +15,14 @@ function atualizartempo() {
 
 
 
+
+function corrigirhorario(numero) {
+    if (numero < 10) {
+        numero = '0' + numero;
+    }
+    return numero;
+
+}
 setInterval(atualizartempo, 1000);
 
 console.log(horario);
