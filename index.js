@@ -23,6 +23,8 @@ function corrigirhorario(numero) {
     return numero;
 
 }
+ atualizartempo();
+
 setInterval(atualizartempo, 1000);
 
 console.log(horario);
